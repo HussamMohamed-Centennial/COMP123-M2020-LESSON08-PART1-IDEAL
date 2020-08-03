@@ -23,7 +23,12 @@ namespace COMP123_M2020_LESSON08_PART1_IDEAL
         /// <param name="e"></param>
         private void ClickMeButton_Click(object sender, EventArgs e)
         {
-            WelcomeLabel.Text =( WelcomeLabel.Text == "Hello, World!") ? "Clicked!" : "Hello, World!";
+            WelcomeLabel.Text =( WelcomeLabel.Text == $" Hello, {NameTextBox.Text}") ? "Clicked!" : $" Hello, {NameTextBox.Text}";
+        }
+
+        private void HelloWorldForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
