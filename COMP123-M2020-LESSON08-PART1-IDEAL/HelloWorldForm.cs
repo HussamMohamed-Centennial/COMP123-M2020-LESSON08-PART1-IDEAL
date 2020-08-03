@@ -16,5 +16,14 @@ namespace COMP123_M2020_LESSON08_PART1_IDEAL
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// This method changes the text prop of the welcomeLable depending on its initial value 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ClickMeButton_Click(object sender, EventArgs e)
+        {
+            WelcomeLabel.Text =( WelcomeLabel.Text == "Hello, World!") ? "Clicked!" : "Hello, World!";
+        }
     }
 }
