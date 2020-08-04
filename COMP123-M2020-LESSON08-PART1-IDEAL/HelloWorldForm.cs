@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace COMP123_M2020_LESSON08_PART1_IDEAL
@@ -29,11 +30,17 @@ namespace COMP123_M2020_LESSON08_PART1_IDEAL
         private void HelloWorldForm_Load(object sender, EventArgs e)
         {
             ClickMeButton.Enabled = false;
+            WelcomeLabel.Font = new Font("Consolas",24.0f);
         }
 
         private void NameTextBox_TextChanged(object sender, EventArgs e)
         {
             ClickMeButton.Enabled = NameTextBox.Text.Length > 1;
+        }
+
+        private void GreetingCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            GreetingsGroupBox.Visible = GreetingCheckBox.Checked;
         }
     }
 }
